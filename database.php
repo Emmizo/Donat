@@ -33,12 +33,12 @@ class Database{
 		}
 	}
 
-	// public function read($id=null){
-	// 	$sql = "SELECT * FROM `crud`";
-	// 	if($id){ $sql .= " WHERE id=$id";}
- // 		$res = mysqli_query($this->connection, $sql);
- // 		return $res;
-	// }
+	public function read($id=null){
+		$sql = "SELECT * FROM `crud`";
+		if($id){ $sql .= " WHERE id=$id";}
+ 		$res = mysqli_query($this->connection, $sql);
+ 		return $res;
+	}
 
 	public function update($fname,$lname,$email,$gender,$age, $id){
 		$sql = "UPDATE `crud` SET firstname='$fname', lastname='$lname', email='$email', gender='$gender', age='$age' WHERE id=$id";
